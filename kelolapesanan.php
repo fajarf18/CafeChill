@@ -111,16 +111,16 @@
                                 <td>
                                     <?php if ($row['status'] === 'pending') : ?>
                                     <a href="confirm.php?id=<?php echo $row['id']; ?>" class="btn btn-success btn-sm">
-                                        Confirm
+                                        <i class="fas fa-check"></i>
                                     </a>
                                     <a href="cancel.php?id=<?php echo $row['id']; ?>" class="btn btn-warning btn-sm">
-                                        Cancel
+                                        <i class="fas fa-times"></i>
                                     </a>
                                     <?php endif; ?>
                                     <a href="delete.php?id=<?php echo $row['id']; ?>" 
                                     class="btn btn-danger btn-sm"
                                     onclick="return confirm('Anda yakin ingin menghapus pesanan ini?');">
-                                        Delete
+                                        <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
                             </tr>
