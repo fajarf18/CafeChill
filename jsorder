@@ -1,0 +1,34 @@
+// Quantity Control
+function increaseQuantity(button) {
+    let quantitySpan = button.previousElementSibling;
+    let currentQuantity = parseInt(quantitySpan.innerText);
+    quantitySpan.innerText = currentQuantity + 1;
+}
+
+function decreaseQuantity(button) {
+    let quantitySpan = button.nextElementSibling;
+    let currentQuantity = parseInt(quantitySpan.innerText);
+    if (currentQuantity > 1) {
+        quantitySpan.innerText = currentQuantity - 1;
+    }
+}
+
+// Open and Close Popup
+function openPopup() {
+    document.getElementById('edit-popup').style.display = 'flex';
+}
+
+function closePopup() {
+    document.getElementById('edit-popup').style.display = 'none';
+}
+
+// Save Edits
+function saveEdit() {
+    alert('Your order has been updated!');
+    closePopup();
+}
+
+// Navigate to Payment Page
+function goToPayment() {
+    window.location.href = "payment.html"; // Replace with actual payment page
+}
